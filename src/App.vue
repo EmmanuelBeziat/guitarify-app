@@ -1,11 +1,17 @@
+<template>
+	<div class="site-content">
+		<main class="main" id="content" tabindex="-1">
+			<RouterView />
+		</main>
+	</div>
+</template>
+
 <script setup>
 import { RouterView } from 'vue-router'
-</script>
+import { useGuitarsStore } from '@/stores/guitars'
 
-<template>
-	<h1>guitarify</h1>
-  <RouterView />
-</template>
+useGuitarsStore().fetch()
+</script>
 
 <style scoped>
 header {
