@@ -9,8 +9,10 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import { useGuitarsStore } from '@/stores/guitars'
+import { useBrandsStore } from './stores/brands'
 
 useGuitarsStore().fetch()
+useBrandsStore().fetch()
 </script>
 
 <style scoped>
@@ -49,7 +51,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   header {
     display: flex;
     place-items: center;

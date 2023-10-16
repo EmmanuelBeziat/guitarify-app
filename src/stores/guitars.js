@@ -15,7 +15,10 @@ export const useGuitarsStore = defineStore({
 
 	actions: {
 		async fetch () {
-			await fetch(api.guitars)
+			const params = new URLSearchParams({
+				userId: 1
+			})
+			await fetch(`${api.guitars}?${params}`)
 				.then(response => response.json())
 				.then(data => { this.guitars = data })
 				.catch(error => console.error(`Store error: ${error}`))

@@ -1,7 +1,7 @@
 <template>
 	<div class="guitar card">
 		<picture class="card-picture">
-			<img :src="`images/uploads/guitars/${guitar.picture}`" :alt="guitar.model">
+			<img :src="`${guitar.picture}`" :alt="guitar.model">
 		</picture>
 
 		<header class="card-header">
