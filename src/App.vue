@@ -1,5 +1,6 @@
 <template>
 	<div class="site-content">
+		<Header />
 		<main class="main" id="content" tabindex="-1">
 			<RouterView />
 		</main>
@@ -9,10 +10,22 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import { useGuitarsStore } from '@/stores/guitars'
-import { useBrandsStore } from './stores/brands'
+import { useBrandsStore } from '@/stores/brands'
+import { useTuningsStore } from '@/stores/tunings'
+import { useStringsStore } from '@/stores/strings'
+import { useMasteriesStore } from '@/stores/masteries'
+import { useSongsStore } from '@/stores/songs'
+import { usePlaylistsStore } from '@/stores/playlists'
+
+import Header from '@/components/layout/Header.vue'
 
 useGuitarsStore().fetch()
 useBrandsStore().fetch()
+useTuningsStore().fetch()
+useStringsStore().fetch()
+useMasteriesStore().fetch()
+useSongsStore().fetch()
+usePlaylistsStore().fetch()
 </script>
 
 <style scoped>
