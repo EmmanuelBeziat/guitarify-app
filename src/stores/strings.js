@@ -11,6 +11,7 @@ export const useStringsStore = defineStore({
 	getters: {
 		list: state => state.strings,
 		count: state => state.strings.length,
+		get: state => id => state.strings.find(string => string.id === id)
 	},
 
 	actions: {

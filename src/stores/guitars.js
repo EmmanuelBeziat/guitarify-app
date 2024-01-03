@@ -11,6 +11,7 @@ export const useGuitarsStore = defineStore({
 	getters: {
 		list: state => state.guitars,
 		count: state => state.guitars.length,
+		get: state => uuid => state.guitars.find(guitar => guitar.uuid === uuid)
 	},
 
 	actions: {

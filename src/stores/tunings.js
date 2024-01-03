@@ -11,6 +11,7 @@ export const useTuningsStore = defineStore({
 	getters: {
 		list: state => state.tunings,
 		count: state => state.tunings.length,
+		get: state => id => state.tunings.find(tuning => tuning.id === id)
 	},
 
 	actions: {

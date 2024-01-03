@@ -11,6 +11,7 @@ export const usePlaylistsStore = defineStore({
 	getters: {
 		list: state => state.playlists,
 		count: state => state.playlists.length,
+		get: state => uuid => state.playlists.find(playlist => playlist.uuid === uuid)
 	},
 
 	actions: {

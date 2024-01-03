@@ -1,7 +1,7 @@
 <template>
 	<nav class="menu">
-		<MenuItem :to="{ name: 'Home' }" label="Guitars" />
 		<MenuItem :to="{ name: 'Playlists' }" label="Playlists" />
+		<MenuItem :to="{ name: 'Guitars' }" label="Guitars" />
 	</nav>
 </template>
 
@@ -12,6 +12,5 @@ import MenuItem from '@/components/layout/MenuItem.vue';
 <style scoped>
 .menu {
 	display: flex;
-	margin-bottom: 25px;
 }
 </style>

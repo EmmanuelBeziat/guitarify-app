@@ -11,6 +11,7 @@ export const useBrandsStore = defineStore({
 	getters: {
 		list: state => state.brands,
 		count: state => state.brands.length,
+		get: state => name => state.brands.find(brand => brand.name === name)
 	},
 
 	actions: {

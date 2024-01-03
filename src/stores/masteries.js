@@ -11,6 +11,7 @@ export const useMasteriesStore = defineStore({
 	getters: {
 		list: state => state.masteries,
 		count: state => state.masteries.length,
+		get: state => id => state.masteries.find(mastery => mastery.id === id)
 	},
 
 	actions: {

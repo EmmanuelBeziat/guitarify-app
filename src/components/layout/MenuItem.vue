@@ -1,5 +1,5 @@
 <template>
-	<RouterLink class="menu-item" :class="!isActive || '-active'" :to="to">
+	<RouterLink class="menu-item" :class="!isActive || '-active'" :to>
 		{{ label }}
 	</RouterLink>
 </template>
@@ -26,13 +26,15 @@ const isActive = computed(() => router.resolve(props.to).path === '/' + route.pa
 
 <style scoped>
 .menu-item {
+	--color-item: var(--color-text);
 	display: flex;
 	align-items: center;
 	gap: .5em;
 	padding: .5em 1em;
+	color: var(--color-item);
 }
 
 .menu-item.-active {
-	color: var(--color-text);
+	--color-item: var(--color-primary);
 }
 </style>
